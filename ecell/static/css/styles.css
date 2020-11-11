@@ -1,0 +1,15 @@
+.heading{
+  background: linear-gradient(110deg, #a20a0a 60%, #ec524b 60%);
+  color:white;
+  height:180px;
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  font-family: fantasy;
+}
+.bd{
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+.index_content{
+  margin-top: 100px;
+}

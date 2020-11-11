@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <hr>
+  <br>
+  <br>
+  <p>{{ cnt }}</p>
+  <hr>
+  <p>Please answer the following questions:</p>
+   <form method="post">
+     {% csrf_token %}
+     {{ formset.management_form }}
+     {% for form in formset %}
+        {{ form.as_p }}
+    {% endfor %}
+    <input type="submit" value="Submit">
+   </form>
+  <a href="{% url 'index' %}"> Back to Home</a>
+
+{% endblock %}

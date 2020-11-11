@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <p>Welcome to E Cell, a website developed by <em>Aditya R Rudra</em>!</p>
+  <br>
+  <br>
+  <div class="row">
+
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-outline-danger" onclick= "location.href = '{% url 'student' %}'" >Student</button>
+    </div>
+    <div class="col-lg-6">
+      <button type="button" class="btn btn-outline-danger" onclick= "location.href = '{% url 'startup' %}'">Startup</button>
+    </div>
+  </div>
+
+{% endblock %}

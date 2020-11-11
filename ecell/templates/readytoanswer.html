@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <hr>
+  <br>
+  <br>
+  <p>To get started, the company would like to have some questions answered...</p>
+  <p>Ready to Answer??</p>
+  <a href="{% url 'question' role_obj.pk rollno %}">Yes</a>
+   <a href="{% url 'index'%}">I'll try later</a>
+
+
+{% endblock %}

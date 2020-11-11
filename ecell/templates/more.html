@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <br>
+  <br>
+  <hr>
+  <p>Do you want to add more questions??</p>
+  <hr>
+  <a href="{% url 'more' %}">Yes</a> <a href="{% url 'current' %}">No</a>
+
+{% endblock %}

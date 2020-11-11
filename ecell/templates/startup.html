@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <br>
+  <br>
+  <form method="post" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+
+
+{% endblock %}

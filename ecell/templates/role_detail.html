@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="current">
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <br>
+  <hr>
+  <p>Role: {{ role.role }}</p>
+  <p>Company: {{ role.startup_name }}</p>
+  <br>
+  <hr>
+  {% if students %}
+  <p>The following students have applied for this role till now...</p>
+  <ul>
+    {% for student in students %}
+    <li> {{student.first_name}}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>There are currently no applicants for this role..</p>
+  {% endif %}
+  <a href="{% url 'index' %}"> Back to Home</a>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="current">
+  <p>Welcome to the Startup Portal, a website developed by <em>Aditya R Rudra</em>!</p>
+  <br>
+  <br>
+  <p>The following startups have applied till now...</p>
+  <ul>
+    {% for startup in applied %}
+    <li><a href="{% url 'role_detail' startup.pk %}"> {{ startup.role }} </a> </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'index' %}"> Back to Home</a>
+</div>
+{% endblock %}
